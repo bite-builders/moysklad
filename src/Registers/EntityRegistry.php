@@ -70,8 +70,10 @@ use MoySklad\Entities\Documents\RetailShift;
 use MoySklad\Entities\Documents\Returns\AbstractReturn;
 use MoySklad\Entities\Documents\Returns\PurchaseReturn;
 use MoySklad\Entities\Documents\Returns\SalesReturn;
+use MoySklad\Entities\Image;
 use MoySklad\Entities\Employee;
 use MoySklad\Entities\ExpenseItem;
+use MoySklad\Entities\File;
 use MoySklad\Entities\Folders\ProductFolder;
 use MoySklad\Entities\Group;
 use MoySklad\Entities\Misc\Attribute;
@@ -81,6 +83,7 @@ use MoySklad\Entities\Misc\CustomEntity;
 use MoySklad\Entities\Misc\Publication;
 use MoySklad\Entities\Misc\State;
 use MoySklad\Entities\Misc\Webhook;
+use MoySklad\Entities\Misc\Webhookstock;
 use MoySklad\Entities\Organization;
 use MoySklad\Entities\Products\AbstractProduct;
 use MoySklad\Entities\Products\Bundle;
@@ -139,6 +142,7 @@ class EntityRegistry extends AbstractSingleton{
         BundleComponent::class,
         Country::class,
         Webhook::class,
+        Webhookstock::class,
         ProductFolder::class,
         Consignment::class,
         Variant::class,
@@ -197,7 +201,9 @@ class EntityRegistry extends AbstractSingleton{
         ProcessingMaterial::class,
         Bonustransaction::class,
         Bonusprogram::class,
-        Saleschannel::class
+        Saleschannel::class,
+        Image::class,
+        File::class
     ];
     public $entityNames = [];
 
